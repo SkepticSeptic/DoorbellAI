@@ -4,10 +4,18 @@ Starter guide:
 
 For this you will need:
 An Nvidia Jetson Nano
+
 A CSI Camera for it
+
 An active internet connection for your nano, preferrably through Ethernet
+
 A USB C cable for the nano
+
 & Finally a storage card for the nano
+
+
+
+
 
 
 Instructions: 
@@ -21,6 +29,6 @@ sudo apt-get update && apt upgrade
 
 Then download the script through the terminal by running:
 
-sudo wget https://github.com/SkepticSeptic/DoorbellAI/blob/main/doorbellai.py
+git clone https://github.com/SkepticSeptic/DoorbellAI.git
 
 
