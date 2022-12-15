@@ -18,7 +18,7 @@ print("Hey lovely user, have you read the readme?\nNo?\nWell what do you think y
 # variables, sender email is a default email. change it if it gets overloaded from people using it (as if)
 bailOut = 'y'
 ownEmail = input("Use default email to send emails from?")
-print("read below, seriously:\nBasically the server has a server email, right? when the server detects a human, it sends an email FROM the SERVER email,\n TO YOUR email which you will define LATER\n ONLY if for whatever reason the default server email DOESNT WORK, type 'y' to input your own 'server email'")
+print("Unless you've read the 'changing server email' section in the readme and KNOW what youre doing, press any key BESIDES 'y'")
 if ownEmail == 'y' or 'yes' and bailOut == 'y' or 'yes':
 	print("Highly reccomended to create/use a burner email for this, as it is the email the SERVER will be using, not the email you will be recieving alerts on.")
 	bailOut = input("Still know what you're doing? Type 'y' to confirm, and anything else to use default server email")
@@ -76,4 +76,4 @@ while display.IsStreaming():
 				time.sleep(cooldown) # sleep for user defined amount of time
 			except:
         # error message
-				print("Error: Exception occurred during attempted email sending. Try changing server email?") 
+				print("Error: Exception occurred during attempted email sending. Try changing server email? (directions in README.md)") 
