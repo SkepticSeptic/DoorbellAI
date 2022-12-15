@@ -20,12 +20,13 @@ DBAIEmail = 'doorbellai01@gmail.com'
 emailPass = 'defaultpassword' #(dont change this variable, its synced to the actual gmail acc)
 #email holding
 
-while
+#ask for stuff needed for email (recieving email, subject, message, & place)
 userEmail = verification('email', 'to recieve alerts on: ') #email user will recieve alerts on
 subj = verification('subject', 'to title email') #email subject
 message = verification('email message', 'to be alerted by: ') #email message/body text
 place = verification('camera location', '(where is this camera located?)')
 message = message + '     (camera location:' + place + ')'
+cooldown = verification('cooldown', '(how long should the camera wait for after\ndetecting a person? [ENTER IN SECONDS])')
 
 date='2/22/22' #just messing around here
 
@@ -48,20 +49,19 @@ while display.IsStreaming():
 	detections = net.Detect(img)
 	display.Render(img)
 	display.SetStatus("Object Detection | Network {:.0f} FPS".format(net.GetNetworkFPS()))
-
+	#if person detected, send email:
 	for detection in detections:
-		class_name = "reset" # Resets veriable to prevent false alarms
+		class_name = "reset" #resets variable to prevent false alarms
 		class_name = net.GetClassDesc(detection.ClassID)
 		print(f"Detected '{class_name}'")
 		if (class_name == "person"):
-			print("Person detected!")
+			print("WARN: Person detected, attempting to send email:")
 			try:
-				print("email setup in progress... ")
-				print("logging in...")
+				print("email setup in progress, logging into server... ")
 				server.login(DBAIEmail, emailPass) # connects to server
-				print("Attempting to send email...")
+				print("attempting to send email...")
 				server.sendmail(DBAIEmail, userEmail, msg) # actually sending notification
-				print("mail sent!")
+				print("ALERT: Email sent successfully")
 				print("logging out of email...")
 				server.quit() # logs out
 				print("logged out.\npasuing script for 10 minutes...")
