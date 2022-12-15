@@ -1,4 +1,4 @@
-#README IS CURRENTLY UNFINISHED
+#README
 
 Starter guide:
 
