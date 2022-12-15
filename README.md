@@ -49,3 +49,23 @@ cd DoorbellAI
 & run the script:
 
 python3 doorbellai.py
+
+
+
+
+
+
+
+
+
+
+DEBUGGING/TROUBLESHOOTING:
+
+
+
+
+Setting custom email:
+Basically the server has a server email, right? when the server detects a human, it sends an email FROM the SERVER email, TO YOUR email which you will define LATER.
+
+ONLY if for whatever reason the default server email DOESNT WORK, type 'y' to input your own 'server email'
+
