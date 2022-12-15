@@ -72,7 +72,7 @@ while display.IsStreaming():
 				print("ALERT: Email sent successfully")
 				print("logging out of email...")
 				server.quit() # logs out
-				print("logged out.\npausing script for " + cooldown + " seconds"...")
+				print("logged out.\npausing script for " + cooldown + " seconds...")
 				time.sleep(cooldown) # sleep for user defined amount of time
 			except:
         # error message
