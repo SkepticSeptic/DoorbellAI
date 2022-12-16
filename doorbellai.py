@@ -18,8 +18,8 @@ print("Hey lovely user, have you read the readme?\nNo?\nWell what do you think y
 # variables, sender email is a default email. change it if it gets overloaded from people using it (as if)
 bailOut = 'y'
 ownEmail = input("Enter y to use custom sender email (IGNORE UNLESS YOU KNOW WHAT YOURE DOING)")
-print("Unless you've read the 'changing server email' section in the readme and KNOW what youre doing, press any key BESIDES 'y'")
 if ownEmail == 'y' and bailOut != 'y':
+	print("Unless you've read the 'changing server email' section in the readme and KNOW what youre doing, press any key BESIDES 'y'")
 	print("Highly reccomended to create/use a burner email for this, as it is the email the SERVER will be using, not the email you will be recieving alerts on.")
 	bailOut = input("Still know what you're doing? Type 'y' to confirm, and anything else to use default server email")
 	ownEmail = input("Enter the SERVER SIDE email to use: ")

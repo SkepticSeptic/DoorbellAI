@@ -1,6 +1,6 @@
 #README
 
-(skip to line [DONT FORGET TO ENTER LINE] for installation instructions)
+(skip to line 14 for installation instructions)
 
 Welcome to DoorbellAI!
 
