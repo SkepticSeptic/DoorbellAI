@@ -51,6 +51,8 @@ cd DoorbellAI
 python3 doorbellai.py
 
 
+For a video tutorial, click here: https://youtu.be/CmKMdvL3sD4
+
 
 
 
