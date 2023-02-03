@@ -1,4 +1,4 @@
-#README
+# README
 
 (skip to line 14 for installation instructions)
 
